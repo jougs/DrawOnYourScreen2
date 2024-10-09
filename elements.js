@@ -24,6 +24,7 @@
 import Cairo from 'cairo';
 
 import Clutter from 'gi://Clutter';
+import Cogl from 'gi://Cogl';
 import GObject from 'gi://GObject';
 import Pango from 'gi://Pango';
 import PangoCairo from 'gi://PangoCairo';
@@ -31,12 +32,12 @@ import PangoCairo from 'gi://PangoCairo';
 import { CURATED_UUID as UUID } from './utils.js';
 
 export const StaticColor = {
-    WHITE: Clutter.Color.new(255, 255, 255, 255),
-    BLUE: Clutter.Color.new(0, 0, 255, 255),
-    TRANSPARENT: Clutter.Color.new(0, 0, 0, 0),
-    BLACK: Clutter.Color.new(0, 0, 0, 255),
-    GRAY: Clutter.Color.new(160, 160, 164, 255),
-    RED: Clutter.Color.new(255, 0, 0, 255)
+    WHITE: Cogl.Color.from_string("#fff"),
+    BLUE: Cogl.Color.from_string("#00f"),
+    TRANSPARENT: Cogl.Color.from_string("#0000"),
+    BLACK: Cogl.Color.from_string("#000"),
+    GRAY: Cogl.Color.from_string("#a0a0a4"),
+    RED: Cogl.Color.from_string("#f00")
 }
 
 export const Shape = { NONE: 0, LINE: 1, ELLIPSE: 2, RECTANGLE: 3, TEXT: 4, POLYGON: 5, POLYLINE: 6, IMAGE: 7 };
